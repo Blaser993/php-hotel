@@ -68,21 +68,24 @@
             </tr>
         </thead>
         <tbody>
-        <?php foreach ($hotels as $key => $hotel): ?>
-            <tr>
-                <th scope="row"><?php echo $key +1 ?></th>
-                <td><?php echo $hotel["name"];?></td>
-                <td><?php echo $hotel["description"];?></td>
-                <td>
-                    <?php if ($hotel["parking"] === false){
-                        echo "no" ;}
-                    else  echo "sì";?>
-                </td>
-                <td><?php echo $hotel["vote"];?></td>
-                <td><?php echo $hotel["distance_to_center"] . " Km"; ?></td>
-            </tr>
+
+            <?php foreach ($hotels as $key => $hotel): ?>
+
+                <tr>
+                    <th scope="row"><?php echo $key +1 ?></th>
+                    <td><?php echo $hotel["name"];?></td>
+                    <td><?php echo $hotel["description"];?></td>
+                    <td>
+                        <?php if ($hotel["parking"] === false){
+                            echo "no" ;}
+                        else  echo "sì";?>
+                    </td>
+                    <td><?php echo $hotel["vote"];?></td>
+                    <td><?php echo $hotel["distance_to_center"] . " Km"; ?></td>
+                </tr>
 
             <?php endforeach ?>
+
         </tbody>
         
         
