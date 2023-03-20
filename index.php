@@ -53,22 +53,47 @@
 </head>
 <body>
 
-    <?php
-    foreach ($hotels as $key => $hotel): ?>
-        <h1><?php echo $hotel["name"];?></h1>
-        <h3><?php echo $hotel["description"];?></h3>
 
-        <h4>Parcheggi: 
-            <?php if ("parking" === false){
-                echo "no" ;}
-            else  echo "sì";?>
-        </h4>
 
-        <h4>Voto: <?php echo $hotel["vote"];?></h4>
-        <h4>Distanza dal centro: <?php echo $hotel["distance_to_center"] . " Km";?></h4>
-        <?php
-    endforeach;    
-    ?>
+    <table>
+         <?php foreach ($hotels as $key => $hotel): ?>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Parcheggi</th>
+                <th scope="col">Voto</th>
+                <th scope="col">Distanza dal centro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+        </tbody>
+        
+        
+            <h1><?php echo $hotel["name"];?></h1>
+            <h3><?php echo $hotel["description"];?></h3>
+
+            <h4>Parcheggi: 
+                <?php if ($hotel["parking"] === false){
+                    echo "no" ;}
+                else  echo "sì";?>
+            </h4>
+
+            <h4>Voto: <?php echo $hotel["vote"];?></h4>
+            <h4>Distanza dal centro: <?php echo $hotel["distance_to_center"] . " Km";?></h4>
+
+            <?php
+        endforeach;    
+        ?>
+    </table>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
