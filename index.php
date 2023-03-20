@@ -53,8 +53,14 @@
 <body>
 
     <?php
-    foreach ($hotels as $key => $hotel):
-        echo $hotel;
+    foreach ($hotels as $key => $hotel): ?>
+        <h1><?php echo $hotel["name"];?></h1>
+        <h3><?php echo $hotel["description"];?></h3>
+        <h4>Parcheggi: <?php echo $hotel["parking"];?></h4>
+        <h4>Voto: <?php echo $hotel["vote"];?></h4>
+        <h4>Distanza dal centro: <?php echo $hotel["distance_to_center"] . " Km";?></h4>
+        
+        <?php
     endforeach;    
     ?>
 </body>
