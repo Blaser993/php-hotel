@@ -60,8 +60,8 @@
 
         <h4>Parcheggi: 
             <?php if ("parking" === false){
-                echo "nessuno" ;}
-            else  echo $hotel["parking"];?>
+                echo "no" ;}
+            else  echo "sì";?>
         </h4>
 
         <h4>Voto: <?php echo $hotel["vote"];?></h4>
